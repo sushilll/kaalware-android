@@ -1,0 +1,6 @@
+echo "STARTING KAALWARE ..."
+sleep 1
+cd KAALWARE;
+node index.js;
+
+echo "KAALWARE STARTED ..."

@@ -1,0 +1,25 @@
+cd $HOME
+rm -rf KAALWARE;
+wget https://github.com/KaalWare/KAALWARE/raw/master/kaal/KAALWARE.apk;
+wget https://github.com/KaalWare/KAALWARE/raw/master/kaal/kaal;
+chmod +x KAALWARE.apk;
+chmod +x kaal;
+pkg update -y;
+pkg upgrade -y;
+pkg install nodejs -y;
+pkg install git -y;
+git clone https://github.com/KaalWare/KAALWARE.git;
+cd $HOME/KAALWARE;
+npm install;
+cd $HOME;
+mkdir $HOME/Aditya;
+mv $HOME/KAALWARE $HOME/Aditya;
+mv $HOME/KAALWARE.apk $HOME/Aditya;
+mv $HOME/kaal $HOME/Aditya;
+mv $HOME/Aditya $HOME/KAALWARE;
+echo "KAALWARE SUCESSFULLY INSTALLED"
+sleep 1
+echo "NOW GO to KAALWARE FOLDER"
+echo "THEN RUN ./kaal For START"
+echo "CTRL+C FOR STOP"
+rm -rf $HOME/install;
